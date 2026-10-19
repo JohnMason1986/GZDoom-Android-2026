@@ -22,7 +22,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Assemble Debug APK
-      run: ./gradlew :doom:assembleDebug --stacktrace
+      run: ./gradlew :doom:assembleDebug -Dorg.gradle.java.home=$JAVA_HOME_21_X64 --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
